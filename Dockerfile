@@ -1,7 +1,4 @@
-FROM nginx:alpine
+FROM tomcat:alpine
 
-COPY default.conf /etc/nginx/conf.d/
-COPY index.html /usr/share/nginx/html/
+COPY /var/lib/jenkins/workspace/samplepipeline/target/hello-world-1.0-SNAPSHOT.war /usr/local/tomcat/webapps/
 
-
-EXPOSE 80
